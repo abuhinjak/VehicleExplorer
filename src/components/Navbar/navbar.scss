@@ -1,0 +1,74 @@
+@import '../../assets/scss/main.scss';
+
+.main--header-wrap {
+    background-color: $secondary--clr;
+    transition: $transition;
+
+    &.scroll {
+        background-color: #fff;
+
+        .navbar--item {
+            color: $secondary--clr;
+            font-weight: 600;
+        }
+        
+    }
+
+    .main--header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav--logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        
+            &-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 70px;
+
+                img {
+                    -o-object-fit: cover;
+                       object-fit: cover;    
+                }
+            }
+        
+            .logo--title {
+                font-size: 28px;
+                font-weight: 700;
+                color: #fff;
+            }
+        }
+        
+        .navbar--items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3em;
+            color: #fff;
+
+            .navbar--item {
+                font-size: 20px;
+                font-weight: 500;
+                cursor: pointer;
+
+                a {
+                    color: #fff;
+
+                    &.active {
+                        color: $primary--clr;
+                    }
+                    
+                    &:hover {
+                        color: $primary--clr;
+                    }
+                }
+
+            }
+        }
+    }
+}
