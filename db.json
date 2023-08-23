@@ -1,0 +1,85 @@
+ {
+  "total_pages": 4,
+  "data": [
+   {
+    "name": "Alfa Romeo",
+    "logo": "https://i.imgur.com/m9Tkn05.png",
+    "id": "1"
+   },
+   {
+    "name": "Audi",
+    "logo": "https://i.imgur.com/GXjIvyO.png",
+    "id": "2"
+   },
+   {
+    "name": "BMW",
+    "logo": "https://i.imgur.com/vozsqru.png",
+    "id": "3"
+   },
+   {
+    "name": "Fiat",
+    "logo": "https://i.imgur.com/YEct3U8.png",
+    "id": "4"
+   },
+   {
+    "name": "Ford",
+    "logo": "https://i.imgur.com/ZqLFfWl.png",
+    "id": "5"
+   },
+   {
+    "name": "Hodna",
+    "logo": "https://i.imgur.com/mmR4onz.png",
+    "id": "6"
+   },
+   {
+    "name": "Hyundai",
+    "logo": "https://i.imgur.com/td2DASB.png",
+    "id": "7"
+   },
+   {
+    "name": "Kia",
+    "logo": "https://i.imgur.com/zH9WdDN.png",
+    "id": "8"
+   },
+   {
+    "name": "Nissan",
+    "logo": "https://i.imgur.com/JgYWD4L.png",
+    "id": "9"
+   },
+   {
+    "name": "Mercedes-Benz",
+    "logo": "https://i.imgur.com/jVUUftN.png",
+    "id": "10"
+   },
+   {
+    "name": "Opel",
+    "logo": "https://i.imgur.com/ZfaZgfs.png",
+    "id": "11"
+   },
+   {
+    "name": "Renault",
+    "logo": "https://i.imgur.com/lwyctdq.png",
+    "id": "12"
+   },
+   {
+    "name": "Seat",
+    "logo": "https://i.imgur.com/o7RNDHl.png",
+    "id": "13"
+   },
+   {
+    "name": "Škoda",
+    "logo": "https://i.imgur.com/wHGiNuf.png",
+    "id": "14"
+   },
+   {
+    "name": "Volvo",
+    "logo": "https://i.imgur.com/VTcWLRO.png",
+    "id": "15"
+   },
+   {
+    "name": "Volkswagen",
+    "logo": "https://i.imgur.com/CB8pIk7.png",
+    "id": "16"
+   }
+  ]
+ }
