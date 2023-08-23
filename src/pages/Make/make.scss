@@ -1,0 +1,21 @@
+@import '../../assets/scss/main.scss';
+
+.make--info-wrap {
+    margin-top: 10em;
+
+    .make--title {
+        color: $primary--clr;
+        font-size: 3.5em;
+        font-weight: 800;
+        z-index: 1;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .make--info-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}

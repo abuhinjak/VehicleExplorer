@@ -8,12 +8,14 @@ function Navbar() {
   return (
     <header className="main--header-wrap fixed-top">
         <div className="container main--header">
-            <div className="nav--logo">
-                <div className="nav--logo-img">
-                    <img src={logo} alt="Vehica Logo" />
+            <NavLink to="/">
+                <div className="nav--logo">
+                    <div className="nav--logo-img">
+                        <img src={logo} alt="Vehica Logo" />
+                    </div>
+                    <span className="logo--title">Vehica</span>
                 </div>
-                <span className="logo--title">Vehica</span>
-            </div>
+            </NavLink>
             <nav className="main--navbar">
                 <ul className="navbar--items">
                     <li className="navbar--item">

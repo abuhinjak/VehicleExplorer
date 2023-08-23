@@ -7,6 +7,7 @@ import Models from './pages/Models/Models'
 import Model from './pages/Model/Model'
 import NotFound from './pages/NotFound/NotFound'
 import ShowCase from "./pages/Showcase/ShowCase";
+import AddForm from "./components/AddForm/AddForm";
 
 const router = createBrowserRouter([
     {
@@ -23,11 +24,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/makes/:makeId',
-                element: <Make key="makeUpdate"/>
+                element: <Make />
             },
             {
                 path: '/makes/new',
-                element: <Make key="makeCreate"/>
+                element: <AddForm />
             },
             {
                 path: 'makes/:makeId/models',
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'makes/:makeId/models/new',
-                element: <Model key="modelCreate"/>
+                element: <AddForm />
             }
         ]
     },
