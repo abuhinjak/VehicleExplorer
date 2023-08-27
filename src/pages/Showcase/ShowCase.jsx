@@ -18,11 +18,11 @@ function ShowCase() {
                 slidesPerView={1}
                 spaceBetween={30}
                 centeredSlides={true}
-                speed={5000}
-                // autoplay={{
-                // delay: 2500,
-                // disableOnInteraction: false,
-                // }}
+                loop={true}
+                autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+                }}
                 modules={[Autoplay]}
                 >
                 <SwiperSlide>
@@ -36,7 +36,7 @@ function ShowCase() {
                 </SwiperSlide>
             </Swiper>
 
-            <h1 className='main--title'>Find Your <span className='main--title-bold'>Perfect</span> Car</h1>
+            <h1 className='main--title animated fadeInDown'>Find Your <span className='main--title-bold'>Perfect</span> Car</h1>
 
             <ShowCaseSearch />
     </main>

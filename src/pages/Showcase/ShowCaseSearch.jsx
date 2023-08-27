@@ -17,7 +17,6 @@ function ShowCaseSearch() {
     axiosClient.get('/makes')
       .then(res => {
         setMakes(res.data)
-        console.log(res.data)
         setMakesOptions(res.data.map(make => ({ value: make.id, label: make.name })))
       })
       .catch(err => console.log(err))
@@ -41,12 +40,12 @@ function ShowCaseSearch() {
   }
 
   return (
-      <div className="showcase--search-container">
+      <div className="showcase--search-container animated fadeInDown">
 
           <Select onChange={setSelectedMake} className='makes--select' options={makesOptions} />
           <Select onChange={setSelectedModel} className='models--select' options={modelsOptions} />
 
-          <button onClick={handleViewModel} className="btn btn-primary">View Model</button>
+          <button onClick={handleViewModel} className="btn btn--primary">View Model</button>
 
       </div>
   )

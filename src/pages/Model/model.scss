@@ -1,0 +1,47 @@
+@import '../../assets/scss/main.scss';
+
+.model--info-wrap {
+    margin-top: 10em;
+
+    .model--title {
+        position: relative;
+        color: $primary--clr;
+        font-size: 3.5em;
+        font-weight: 800;
+        z-index: 1;
+    }
+
+    .model--title-bg {
+        position: absolute;
+        right: -30%;
+        font-size: 150px;
+        font-weight: 800;
+        color: #ccc;
+        opacity: 0.2;
+        z-index: -1;
+        width: 100%;
+        top: 30%;
+    }
+
+    .model--info-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        gap: 20px;
+        z-index: 1;
+        padding-right: 20em;
+        margin-bottom: 4em;
+
+        .model--info-img-wrap {
+            flex: 1 1 200px;
+        }
+
+        .model--info-desc {
+            flex: 3 200px;
+            padding: 0 1em;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+}

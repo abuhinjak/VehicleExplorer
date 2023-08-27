@@ -2,8 +2,7 @@
 
 .showcase {
     position: relative;
-    height: 900px;
-    max-height: 900px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,6 +18,23 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+
+        .swiper-slide {
+            img {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                -webkit-animation-name: imageZoom;
+                        animation-name: imageZoom;
+                -webkit-animation-duration: 50s;
+                        animation-duration: 50s;
+                -webkit-animation-timing-function: ease;
+                        animation-timing-function: ease;
+                -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+            }
+        }
     }
 
     .main--title {
@@ -46,5 +62,29 @@
         .models--select {
             min-width: 300px;
         }
+    }
+}
+
+// Select styling
+.css-w9q2zk-Input2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@-webkit-keyframes imageZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes imageZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
     }
 }

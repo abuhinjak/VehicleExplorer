@@ -7,7 +7,8 @@ import Models from './pages/Models/Models'
 import Model from './pages/Model/Model'
 import NotFound from './pages/NotFound/NotFound'
 import ShowCase from "./pages/Showcase/ShowCase";
-import AddForm from "./components/AddForm/AddForm";
+import MakeForm from "./components/Forms/MakeForm";
+import ModelForm from "./components/Forms/ModelForm";
 
 const router = createBrowserRouter([
     {
@@ -24,11 +25,15 @@ const router = createBrowserRouter([
             },
             {
                 path: '/makes/:makeId',
-                element: <Make />
+                element: <Make key={'make'} />
+            },
+            {
+                path: '/makes/:makeId/edit',
+                element: <MakeForm key={'makeUpdate'} />
             },
             {
                 path: '/makes/new',
-                element: <AddForm />
+                element: <MakeForm key={'makeCreate'} />
             },
             {
                 path: 'makes/:makeId/models',
@@ -36,11 +41,15 @@ const router = createBrowserRouter([
             },
             {
                 path: 'makes/:makeId/models/:modelId',
-                element: <Model />
+                element: <Model key={'model'} />
+            },
+            {
+                path: 'makes/:makeId/models/:modelId/edit',
+                element: <ModelForm key={'modelUpdate'} />
             },
             {
                 path: 'makes/:makeId/models/new',
-                element: <AddForm />
+                element: <ModelForm key={'modelCreate'}/>
             }
         ]
     },

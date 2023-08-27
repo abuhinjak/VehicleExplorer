@@ -24,7 +24,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             align-items: center;
             justify-content: center;
-            gap: 3.5em;
+            gap: 2.5em;
         }
 
         .makes--item {
@@ -33,36 +33,55 @@
             align-items: center;
             justify-content: center;
             max-width: 320px;
+            height: 400px;
             margin: 0 auto;
+            border-radius: 10px;
+            -webkit-filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+                    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+            overflow: hidden;
 
             .make--img-wrap {
                 width: 100%;
+                height: 100%;
                 background-color: #fff;
-                border-radius: 20px 20px 0 0;
                 overflow: hidden;
 
                 img {
-                    -o-object-fit: none;
-                       object-fit: none;
-                    transform: scale(1);
+                    -o-object-fit: cover;
+                       object-fit: cover;
+                    height: 100%;
                     transition: all 0.3s ease-out;
-                }
-
-                &:hover {
-                    img {
-                        transform: scale(1.05);
-                    }
                 }
             }
 
-            .make--item-title {
+            .make--text-wrap {
                 width: 100%;
+                position: absolute;
+                bottom: -75px;
+                padding: 0.8em 1em 0;
+                background-color:rgba($secondary--clr, .6);
                 color: #fff;
-                font-size: 1.5em;
-                font-weight: 700;
-                padding: 20px 0;
-                background-color: $secondary--clr;
-                border-radius: 0 0 20px 20px;
+                transition: $transition;
+
+                .make--desc {
+                    font-size: 15px;
+                    line-height: 21px;
+                    font-weight: 300;
+                }
+            }
+
+            &:hover {
+                .make--text-wrap {
+                    bottom: 0;
+                    background-color: rgba($secondary--clr, 1);
+                }
+
+                .make--img-wrap {
+                    img {
+                        -webkit-filter: blur(3px);
+                                filter: blur(3px);
+                    }
+                }
             }
         }
     }
@@ -76,6 +95,12 @@
     .search--input {
         input {
             padding: 8px 12px;
+            border: 1px solid $gray--100;
+            border-radius: 4px;
+
+            &:focus {
+                border: 1px solid $secondary--clr;
+            }
         }
     }
 
@@ -83,24 +108,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 3em;
+        gap: 2em;
         margin: 40px auto;
 
         button {
             border: none;
             outline: none;
-            background-color: $secondary--clr;
-            color: #fff;
-            padding: 20px 27px;
-            border-radius: 50%;
+            color: $secondary--clr;
+            background-color: transparent;
+            font-size: 20px;
 
             &:hover {
-                background-color: $primary--clr;
+                color: $primary--clr;
+                background-color: transparent;
             }
 
             &.active {
+                color: $primary--clr !important;
+                background-color: transparent;
+                
                 &:hover {
-                    background-color: $secondary--clr;
+                    color: inherit;
+                    background-color: transparent;
                 }
             }
         }

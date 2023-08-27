@@ -1,0 +1,67 @@
+// Buttons
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+
+    &--primary {
+        border: 1px solid transparent;
+        background-color: $primary--clr;
+        color: #fff;
+    
+        &:hover {
+            background-color: $primary--clr-light;
+            border: 1px solid $primary--clr;
+        }
+    }
+
+    &--secondary {
+        border: 1px solid transparent;
+        background-color: $primary--clr-light;
+
+        &:hover {
+            border: 1px solid $primary--clr;
+        }
+    }
+}
+
+
+// General animations
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }

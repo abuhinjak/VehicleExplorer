@@ -4,18 +4,130 @@
     margin-top: 10em;
 
     .make--title {
+        position: relative;
         color: $primary--clr;
         font-size: 3.5em;
         font-weight: 800;
         z-index: 1;
-        margin-bottom: 40px;
-        text-align: center;
+    }
+
+    .make--title-bg {
+        position: absolute;
+        right: -30%;
+        font-size: 150px;
+        font-weight: 800;
+        color: #ccc;
+        opacity: 0.2;
+        z-index: -1;
+        width: 100%;
+        top: 30%;
     }
 
     .make--info-content {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        position: relative;
         gap: 20px;
+        z-index: 1;
+        padding-right: 30em;
+        margin-bottom: 4em;
+
+        .make--info-img-wrap {
+            flex: 1 1 200px;
+        }
+
+        .make--info-desc {
+            flex: 3 200px;
+            padding: 1em 0;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+
+    .models--wrap {
+        margin-bottom: 80px;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            
+            .main--title {
+                color: $secondary--clr;
+                font-size: 3em;
+                font-weight: 700;
+                z-index: 1;
+        
+                &-bold {
+                    color: $primary--clr;
+                }
+            }
+        }
+    }
+
+    .models--list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+        align-items: center;
+        gap: 3em;
+
+        .model--item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            margin: 0 auto;
+            border-radius: 10px;
+            -webkit-filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+                    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+            overflow: hidden;
+
+            .model--img-wrap {
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                overflow: hidden;
+
+                img {
+                    -o-object-fit: cover;
+                       object-fit: cover;
+                    height: 100%;
+                    transition: all 0.3s ease-out;
+                }
+            }
+
+            .model--text-wrap {
+                width: 100%;
+                position: absolute;
+                bottom: -36px;
+                padding: 0.8em 1em 0;
+                background-color:rgba($secondary--clr, .6);
+                color: #fff;
+                transition: $transition;
+
+                .model--desc {
+                    font-size: 15px;
+                    line-height: 21px;
+                    font-weight: 300;
+                }
+            }
+
+            &:hover {
+                .model--text-wrap {
+                    bottom: 0;
+                    background-color: rgba($secondary--clr, 1);
+                }
+
+                .model--img-wrap {
+                    img {
+                        -webkit-filter: blur(2px);
+                                filter: blur(2px);
+                    }
+                }
+            }
+        }
     }
 }

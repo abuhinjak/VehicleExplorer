@@ -1,0 +1,62 @@
+@import '../../assets/scss/main.scss';
+
+.form--container {
+    margin-top: 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .main--title {
+        color: $secondary--clr;
+        font-size: 3em;
+        font-weight: 700;
+        z-index: 1;
+
+        &-bold {
+            color: $primary--clr;
+        }
+    }
+
+    
+    .form--wrap {
+        width: 500px;
+        min-width: 500px;
+        padding: 40px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+        
+        
+        form {
+            .form--group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2em;
+
+                label {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $secondary--clr;
+                    margin-bottom: 8px;
+                }
+
+                input {
+                    border: 1px solid $primary--clr-light;
+                    outline: none;
+                    padding: 10px 15px;
+                }
+
+                textarea {
+                    outline: none;
+                    border: 1px solid $primary--clr-light;
+                    padding: 10px 15px;
+                }
+
+                .errors {
+                    font-size: 13px;
+                    color: $primary--clr;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

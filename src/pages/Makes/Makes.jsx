@@ -38,13 +38,13 @@ function Makes() {
     }
 
     return (
-        <main className="makes--container">
+        <main className="makes--container animated fadeInDown">
             <h1 className="makes--title text-center">Find Your <span className="makes--title-bold">Favorite </span>Makes</h1>
             <div className="makes--list-header mb-5 container">
                 <div className="search--input">
                     <input type="text" placeholder="Search..." onChange={handleMakeSearch}/>
                 </div>
-                <Link to="/makes/new" className="btn btn-primary">
+                <Link to="/makes/new" className="btn btn--primary">
                   Add New Make
                 </Link>
             </div>
@@ -57,12 +57,17 @@ function Makes() {
                                 <div className="makes--item">
                                     <div className="make--img-wrap">
                                         <img
-                                            src={make.logo}
+                                            src={make.image}
                                             alt={make.name}
                                             referrerPolicy="no-referrer"
                                         />
                                     </div>
-                                    <h2 className="make--item-title text-center">{make.name}</h2>
+                                    <div className="make--text-wrap">
+                                        <h2 className="make--name text-center">{make.name}</h2>
+                                        <p className="make--desc">
+                                        {make.desc && make.desc.split(' ').slice(0, 16).join(' ')}...
+                                        </p>
+                                    </div>
                                 </div>
                             </Link>
                         )) : (
