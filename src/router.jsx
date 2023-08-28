@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound/NotFound'
 import ShowCase from "./pages/Showcase/ShowCase";
 import MakeForm from "./components/Forms/MakeForm";
 import ModelForm from "./components/Forms/ModelForm";
+import About from "./pages/About/About";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
             {
                 path: 'makes/:makeId/models/new',
                 element: <ModelForm key={'modelCreate'}/>
+            },
+            {
+                path: '/about',
+                element: <About />
             }
         ]
     },

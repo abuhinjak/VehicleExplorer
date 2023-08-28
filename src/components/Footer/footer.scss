@@ -1,0 +1,22 @@
+@import '../../assets/scss/main.scss';
+
+.footer--wrap {
+    background-color: $secondary--clr;
+
+    .footer--container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+
+        &-text {
+            font-size: 14px;
+            color: $secondary--clr-light;
+            margin-bottom: 0;
+
+            &-bold {
+                color: $primary--clr;
+            }
+        }
+    }
+}

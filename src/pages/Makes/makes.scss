@@ -2,6 +2,7 @@
 
 .makes--container {
     margin-top: 10em;
+    overflow-x: hidden;
 
     .makes--title {
         color: $secondary--clr;
@@ -9,6 +10,14 @@
         font-weight: 800;
         z-index: 1;
         margin-bottom: 40px;
+
+        @media (max-width: 1024px) {
+            font-size: 2.5em;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 2em;
+        }
 
         &-bold {
             color: $primary--clr;
@@ -90,11 +99,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 576px) {
+            flex-direction: column-reverse;
+            gap: 2em;
+        }
     }
 
     .search--input {
         input {
-            padding: 8px 12px;
+            padding: 7px 12px;
             border: 1px solid $gray--100;
             border-radius: 4px;
 

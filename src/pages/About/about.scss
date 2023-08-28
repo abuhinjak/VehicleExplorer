@@ -1,0 +1,33 @@
+@import '../../assets/scss/main.scss';
+
+.about--page {
+    &-container {
+        height: calc(100vh - 41px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &-content {
+        padding-top: 10em;
+        .main--title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: $secondary--clr;
+            margin-bottom: 1rem;
+
+            @media (max-width: 576px) {
+                font-size: 2.5em;
+            }
+    
+            &-bold {
+                color: $primary--clr;
+            }
+        }
+    
+        .about--page-text {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+    }
+}

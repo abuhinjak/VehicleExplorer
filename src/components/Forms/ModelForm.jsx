@@ -94,7 +94,7 @@ function MakeForm() {
                             rows="10"
                         ></textarea>
                     </div>
-                    <Link to={`/makes/${makeId}/models/${modelId ? modelId : ''}`} className="btn btn--secondary">
+                    <Link to={`/makes/${makeId}${modelId ? '/models' : ''}/${modelId ? modelId : ''}`} className="btn btn--secondary">
                         Cancel
                     </Link>
 

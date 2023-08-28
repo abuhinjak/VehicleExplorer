@@ -29,6 +29,7 @@ function MakeForm() {
       if (make) {
           setValue("name", make.name);
           setValue("logo", make.logo);
+          setValue("image", make.image);
           setValue("desc", make.desc);
       }
   }, [make, setValue]);
@@ -82,6 +83,15 @@ function MakeForm() {
                             {...register("logo")}
                             id="logo"
                             placeholder="Add link to logo img..."
+                        />
+                    </div>
+                    <div className="form--group">
+                        <label htmlFor="image">Image</label>
+                        <input
+                            type="text"
+                            {...register("image")}
+                            id="image"
+                            placeholder="Add link to image..."
                         />
                     </div>
                     <div className="form--group">

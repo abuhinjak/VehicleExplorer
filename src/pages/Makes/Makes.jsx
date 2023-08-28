@@ -65,7 +65,7 @@ function Makes() {
                                     <div className="make--text-wrap">
                                         <h2 className="make--name text-center">{make.name}</h2>
                                         <p className="make--desc">
-                                        {make.desc && make.desc.split(' ').slice(0, 16).join(' ')}...
+                                        {make.desc && make.desc.split(' ').slice(0, 14).join(' ')}...
                                         </p>
                                     </div>
                                 </div>
