@@ -1,21 +1,29 @@
 @import '../../assets/scss/main.scss';
 
-.modal-dialog {
-    width: 400px;
-    max-width: 400px;
-}
+.modal {
+    &.show {
+        .modal-dialog {
+            transform: translateY(60%);
+        }
+    }
 
-.modal-header {
-    border: none;
-}
+    .modal-dialog {
+        width: 400px;
+        max-width: 400px;
 
-.modal-body {
-    font-size: 18px;
-    text-align: center;
-    padding: 2em 0;
-}
-
-.modal-footer {
-    border: none;
-    justify-content: center;
+        .modal-header {
+            border: none;
+        }
+        
+        .modal-body {
+            font-size: 18px;
+            text-align: center;
+            padding: 2em 0;
+        }
+        
+        .modal-footer {
+            border: none;
+            justify-content: center;
+        }
+    }
 }

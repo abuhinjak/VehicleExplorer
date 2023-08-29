@@ -3,6 +3,7 @@
 .make--info-wrap {
     margin-top: 10em;
     overflow-x: hidden;
+    height: calc(100vh - 10em - 41px);
 
     .make--title {
         position: relative;

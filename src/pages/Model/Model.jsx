@@ -30,7 +30,7 @@ function Model() {
         <main className="model--info-wrap">
             <div className="btn--return container">
               <Link className="btn btn--secondary" to={`/makes/${makeId}`}>
-                Return to {makeName}
+                Return {makeName ? `to ${makeName}` : ''}
               </Link>
             </div>
 
@@ -63,7 +63,6 @@ function Model() {
             <DeleteModal
               show={showModal}
               onClose={handleCloseModal}
-              onSave={handleCloseModal}
               link={`/makes/${makeId}/models/${modelId}`}
               name={model.name}
               modelId={modelId}

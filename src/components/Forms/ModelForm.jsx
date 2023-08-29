@@ -8,23 +8,28 @@ import "./forms.scss";
 import { toast } from "react-toastify";
 
 function MakeForm() {
-    const [model, setModel] = useState('');
     const navigate = useNavigate();
-
     const { makeId, modelId } = useParams();
+
+    const [model, setModel] = useState('');
+
     const form = useForm();
     const { register, handleSubmit, formState, setValue } = form;
     const { errors } = formState;
 
+    // Get model data
     const getModelData = async () => {
-        try {
-            const res = await axiosClient.get(`/makes/${makeId}/models/${modelId}`);
-            setModel(res.data);
-        } catch (error) {
-            console.log(error);
+        if(modelId) {
+            try {
+                const res = await axiosClient.get(`/makes/${makeId}/models/${modelId}`);
+                setModel(res.data);
+            } catch (error) {
+                console.log(error);
+            }
         }
     };
 
+    // Set form values if model exists
     useEffect(() => {
       if (model) {
           setValue("name", model.name);
@@ -37,15 +42,16 @@ function MakeForm() {
         if (makeId) {
             getModelData();
         }
-    }, []);
+    },[]);
 
+    // Submit form
     const onSubmit = (data) => {
       (modelId ? 
       axiosClient.put(`/makes/${makeId}/models/${modelId}`, data) :
       axiosClient.post(`/makes/${makeId}/models`, data))
         .then((res) => {
           console.log(res)
-          navigate(`/makes/${makeId}/models/${res.data.id}`)
+          navigate(`/makes/${makeId}`)
           toast.success(`${res.data.name} ${makeId ? 'updated' : 'added'} successfully!`);
         })
         .catch(err => console.log(err))
@@ -64,6 +70,7 @@ function MakeForm() {
                 </h1>
             )}
 
+            {/* Form wrap */}
             <div className="form--wrap">
                 <form onSubmit={handleSubmit(onSubmit)} className="form--content">
                     <div className="form--group">

@@ -8,14 +8,16 @@ import "./forms.scss";
 import { toast } from "react-toastify";
 
 function MakeForm() {
-    const [make, setMake] = useState('');
     const navigate = useNavigate();
-
     const { makeId } = useParams();
+    
+    const [make, setMake] = useState('');
+    
     const form = useForm();
     const { register, handleSubmit, formState, setValue } = form;
     const { errors } = formState;
 
+    // Get make data
     const getMakeData = async () => {
         try {
             const res = await axiosClient.get(`/makes/${makeId}`);
@@ -25,6 +27,7 @@ function MakeForm() {
         }
     };
 
+    // Set form values if make exists
     useEffect(() => {
       if (make) {
           setValue("name", make.name);
@@ -38,8 +41,9 @@ function MakeForm() {
         if (makeId) {
             getMakeData();
         }
-    }, []);
+    },[]);
 
+    // Submit form
     const onSubmit = (data) => {
       (makeId ? 
       axiosClient.put(`/makes/${makeId}`, data) :
@@ -54,6 +58,7 @@ function MakeForm() {
 
     return (
         <section className="form--container container">
+            {/* Title change depending on make exists */}
             {!makeId ? (
                 <h1 className="main--title text-center mb-5">
                     Add New <span className="main--title-bold">Make</span>
@@ -64,6 +69,7 @@ function MakeForm() {
                 </h1>
             )}
 
+            {/* Form wrap */}
             <div className="form--wrap">
                 <form onSubmit={handleSubmit(onSubmit)} className="form--content">
                     <div className="form--group">
